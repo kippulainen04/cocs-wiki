@@ -1,6 +1,7 @@
 import './card.style.css'
 import { Monster } from '../../App'
 import { Grid, styled, Typography } from '@mui/material';
+// All card pictures were collected from https://clashofclans.fandom.com/wiki/Category:Troops
 
 const StyledGrid = styled(Grid)({
   height: '150px',

@@ -4,11 +4,13 @@ import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 import { getData } from './utils/fetch.utils';
+import { Snow } from './components/snow-confetti/snow-confetti';
 
 export type Monster = {
     id: string;
     name: string;
-    email: string;
+    imageUrl: string;
+    describtion: string;
   }
 
 
@@ -19,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const users = await getData<Monster[]>('https://jsonplaceholder.typicode.com/users');
+      const users = await getData<Monster[]>('https://kippulainen04.github.io/Data/cocs_wiki.geojson');
       setMonsters(users)
     };
     fetchUser();
@@ -33,6 +35,10 @@ const App = () => {
     setFilterMonsters(newFilteredMonsters);
   }, [monsters, searchField]);
 
+  useEffect(() => {
+    Snow();
+}, [])
+
   const onSearchChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
@@ -40,7 +46,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1 className='app-title'>Monsters Rolodex</h1>
+      <h1 className='app-title'>Class of Clans Wiki-Cards</h1>
 
       <SearchBox
         className='monsters-search-box'

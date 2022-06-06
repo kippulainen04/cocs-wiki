@@ -1,17 +1,43 @@
 .card-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #95dada;
   border: 1px solid grey;
-  border-radius: 5px;
   padding: 5px;
   cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
-  transform: translateZ(0);
-  transition: transform 0.25s ease-out;
+  transform: translateZ(20px);
+  transition: transform 1s ease-in-out;
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 100;
 }
 
 .card-container:hover {
   transform: scale(1.05);
+}
+
+.class-card {
+  position: relative;
+  height: 230px;
+  margin-bottom: 50px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);
+}
+
+
+
+
+.image {
+    width: 400px;
+    height: 300px;
+    position: absolute;    
+    top: -65px;
+    left: -70px;
 }

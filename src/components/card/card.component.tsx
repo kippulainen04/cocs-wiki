@@ -1,21 +1,35 @@
 import './card.style.css'
 import { Monster } from '../../App'
+import { Grid, styled, Typography } from '@mui/material';
+
+const StyledGrid = styled(Grid)({
+  height: '150px',
+  textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+})
 
 type CardProps = {
     monster: Monster;
 }
 
 const Card = ({ monster }: CardProps) => {
-  const { id, name, email } = monster;
+  const { name, describtion, imageUrl } = monster;
 
   return (
     <div className='card-container'>
-      <img
-        alt={`monster ${name}`}
-        src={`https://robohash.org/${id}?set=set2&size=180x180`}
-      />
-      <h2>{name}</h2>
-      <p>{email}</p>
+      <div className='class-card'>
+        <img
+          alt={`monster ${name}`}
+          src={imageUrl}
+          className="image"
+        />
+      </div>
+      <StyledGrid>
+        <Typography gutterBottom style={{ fontWeight: 400, textShadow: '1px 1px 2px', color: 'black'}} variant="h4">{name}</Typography>
+        <Typography variant="subtitle2">{describtion}</Typography>
+      </StyledGrid>
     </div>
   );
 };

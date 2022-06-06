@@ -4,7 +4,9 @@ import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 import { getData } from './utils/fetch.utils';
+import { ReactComponent as ClassOfClans } from './components/assets/class.svg';
 import { Snow } from './components/snow-confetti/snow-confetti';
+import { styled } from '@mui/material';
 
 export type Monster = {
     id: string;
@@ -13,6 +15,9 @@ export type Monster = {
     describtion: string;
   }
 
+  const ClassFace = styled(ClassOfClans)({
+    marginTop: '50px'
+  });
 
 const App = () => {
   const [searchField, setSearchField] = useState('');
@@ -46,7 +51,8 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1 className='app-title'>Class of Clans Wiki-Cards</h1>
+      <ClassFace />
+      <h3 className='app-title'>Class of Clans Wiki-Cards</h3>
 
       <SearchBox
         className='monsters-search-box'

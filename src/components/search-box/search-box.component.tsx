@@ -7,11 +7,12 @@ type SearchBoxProps = {
     onChangeHandler: (event: ChangeEvent<HTMLInputElement>) => void; 
 }
 
-const SearchBox = ({ className, placeholder, onChangeHandler }: SearchBoxProps) => (
+const SearchBox = ({ className, onChangeHandler }: SearchBoxProps) => (
   <input
     className={`search-box ${className}`}
     type='search'
-    placeholder={placeholder}
+    placeholder="search characters"
+    // placeholder={placeholder}
     onChange={onChangeHandler}
   />
 );

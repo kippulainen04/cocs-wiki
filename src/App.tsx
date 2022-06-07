@@ -4,7 +4,7 @@ import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 import { getData } from './utils/fetch.utils';
-import { ReactComponent as ClassOfClans } from './components/assets/class.svg';
+import { ReactComponent as ClassOfClans } from './components/assets/cocs-icon.svg';
 import { Snow } from './components/snow-confetti/snow-confetti';
 import { styled } from '@mui/material';
 
@@ -16,7 +16,8 @@ export type Monster = {
   }
 
   const ClassFace = styled(ClassOfClans)({
-    marginTop: '50px'
+    marginTop: '50px',
+    width: '310px',
   });
 
 const App = () => {

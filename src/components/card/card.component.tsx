@@ -4,7 +4,7 @@ import { Grid, styled, Typography } from '@mui/material';
 // All card pictures were collected from https://clashofclans.fandom.com/wiki/Category:Troops
 
 const StyledGrid = styled(Grid)({
-  height: '150px',
+  height: '165px',
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',

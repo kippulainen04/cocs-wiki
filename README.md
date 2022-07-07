@@ -51,7 +51,7 @@ After fulfilling the project, I acquire knowledge to:
 
 ## 📋 Requirements
 
-**Build a web application that demonstrating the use of TypeScript in `create-react-app` and apply `service-worker` to measure the quality of the project
+**Build a web application that demonstrating the use of TypeScript in `create-react-app` and apply `service-worker` to measure the quality of the project**
 
 
 <div id='tools'/>
